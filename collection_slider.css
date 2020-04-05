@@ -1,0 +1,29 @@
+/* Collection css start here common for snb and home page */
+.ct_wrapper {width: 100%; background: #fff; margin-bottom: 15px; padding: 15px 30px 10px 30px; box-shadow: 0 0 1px rgba(0,0,0,.1);}
+.ct_wrapper .hmein {font-family: 'Roboto-Regular', sans-serif; font-size: 20px; color: #333; margin-bottom: 15px;}
+.cf_ct_box {width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; transition: transform 0.5s ease;}
+.msiteslide {width: 100%; overflow-x: hidden; overflow-y: hidden;position: relative; padding: 0px 0px 0px 0px;}
+.msiteslide .cf_ct_box{padding: 3px 1px 7px 1px;}
+._collection_tile {display:block; width: 100%; max-width: 165px; min-width: 165px; padding: 5px; border: 0px solid #ddd; border-radius: 0px; box-shadow: 0px 0px 1px rgba(0,0,0,0.2), 0px 2px 5px rgba(0,0,0,0.15); cursor: pointer; outline: none; transition: all 0.3s ease;}
+._collection_tile .ct_title {text-align: center; font-family: 'Roboto-Regular', sans-serif; font-size: 14px; color: #333; padding: 5px 0px 10px 0px;}
+._collection_tile .ct_img_wrapper {width: 100%; height: 100px; overflow: hidden; position: relative; background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%); background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);}
+._collection_tile .ct_img_wrapper > img {display: block; width: auto; min-width: 100%; height: 100%; position: relative; left: 50%; opacity: 0.8; transform: translateX(-50%) scale(1.1); transition: opacity 0.35s ease, transform 0.6s ease;}
+._collection_tile .ct_img_wrapper::after { position: absolute; top: 0; left: 0; width: 110%; height: 110%; background: #ffffff80; content: ''; -webkit-transition: -webkit-transform 0.6s; transition: transform 0.6s; -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0); transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0); }
+._collection_tile .cf_bt_text {text-align: center; font-family: 'Roboto-Regular', sans-serif; font-size: 12px; color: #16BEC3; padding: 15px 0px 10px 0px;}
+._collection_tile:hover .ct_img_wrapper > img {opacity: 0.7; transform: translateX(-50%) scale(1); transition: opacity 0.35s ease, transform 0.6s ease;}
+._collection_tile:hover .ct_img_wrapper::after { -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0); transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0); }
+@media screen and (min-width: 992px){
+	.ctbtn {width: 36px; height: 36px; background: #fff; border-radius: 50%; box-shadow: 0px 0px 3px rgba(0,0,0,0.3); text-align: center; cursor: pointer;user-select: none; position: absolute; top: 50%; margin-top: -18px; z-index: 9; opacity: 0.8; transition: opacity 0.5s ease;}
+	.ctbtn:hover {opacity: 1; transition: opacity 0.3s ease;}
+	.ctbtn > i {font-size: 30px; color: #16BEC3; line-height: 34px;}
+	.ctbtn.prev {left: 4px;}
+	.ctbtn.next {right: 4px;}
+	.ctbtn.disabled {opacity: 0; cursor: default; transition: opacity 0.3s ease;}
+	.ctbtn.disabled > i {color: #999;}
+}
+@media screen and (max-width: 991px){
+	.ct_wrapper {padding: 15px 0px 10px 0px;}
+	.ctbtn {display: none;}
+	.msiteslide {overflow-x: scroll;}
+}
+/* Collection css end here common for snb and home page */

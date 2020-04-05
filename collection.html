@@ -1,0 +1,36 @@
+<div class="row">
+    <h3 class="hmein">Collections for you</h3>
+    <div class="col-xs-12">
+        <div id="ctSlideBox" class="ct_wrapper">
+            <div class="msiteslide">
+                <div class="cf_ct_box">
+                <?php foreach($collections as $key => $collection) { ?>
+                    <a onclick="CfAppActions.pushAnalytics('hp-collections-click', '<?php echo $collection->collectionName ?>')" href="<?php echo $collection->url ?>" class="_collection_tile" target="_blank">
+                        <div class="ct_title">Budget Property</div>
+                        <div class="ct_img_wrapper">
+                            <img class="cf-lazyload" data-src="<?php echo $__currentasset->getUrl('cfassets/images/Office_Homes.jpg'); ?>" alt="<?php echo $collection->collectionName ?>">
+                        </div>
+                        <div class="cf_bt_text">Slide Count <?php echo $key + $key + $key + 1 ?></div>
+                    </a>
+                    <a onclick="CfAppActions.pushAnalytics('hp-collections-click', '<?php echo $collection->collectionName ?>')" href="<?php echo $collection->url ?>" class="_collection_tile" target="_blank">
+                        <div class="ct_title">Natures Home</div>
+                        <div class="ct_img_wrapper">
+                            <img class="cf-lazyload" data-src="<?php echo $__currentasset->getUrl('cfassets/images/Nature_Homes.jpg'); ?>" alt="<?php echo $collection->collectionName ?>">
+                        </div>
+                        <div class="cf_bt_text">Slide Count <?php echo $key + $key + $key + 2 ?></div>
+                    </a>
+                    <a onclick="CfAppActions.pushAnalytics('hp-collections-click', '<?php echo $collection->collectionName ?>')" href="<?php echo $collection->url ?>" class="_collection_tile" target="_blank">
+                        <div class="ct_title">Luxury Houses</div>
+                        <div class="ct_img_wrapper">
+                            <img class="cf-lazyload" data-src="<?php echo $__currentasset->getUrl('cfassets/images/Luxury_Homes.jpg'); ?>" alt="<?php echo $collection->collectionName ?>">
+                        </div>
+                        <div class="cf_bt_text">Slide Count <?php echo $key + $key + $key + 3 ?></div>
+                    </a>
+                <?php } ?>
+                </div>
+            </div>
+            <div class="ctbtn prev disabled"><i class="icon-navigate_before"></i></div>
+            <div class="ctbtn next"><i class="icon-navigate_next"></i></div>
+        </div>
+    </div>
+</div>
